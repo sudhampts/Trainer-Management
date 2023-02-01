@@ -1,0 +1,16 @@
+#div1{
+    border : 10px black groove;
+    margin-left : 300px;
+    margin-right : 300px;
+    margin-top : 100px;
+    padding : 50px;
+    background-color : gray;
+}
+h1{
+    color:Orange;
+}
+table{
+    border : 4px black groove;
+    height : 100px;
+    width : 100px;
+}

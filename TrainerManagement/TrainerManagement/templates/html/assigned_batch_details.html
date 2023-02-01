@@ -1,0 +1,26 @@
+{% extends 'navbar\\adminnavbar.html' %}
+{% load static %}
+{% block content %}
+<div align="center">
+    <h1> Batch Details</h1>
+    <table border="2" cellspacing="0">
+        <tr>
+            <th>Trainer_name</th>
+            <th>Course</th>
+            <th>Date batch Started</th>
+            <th>Batch No</th>
+        </tr>
+        {% for i in Assign %}
+        <tr>
+            <td>{{i.t_name}}</td>
+            <td>{{i.course}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.batch_no}}</td>
+            <td><a href="{% url 'update' i.id %}"><img src="{% static 'images/update.png' %}" width="50px"></a></td>
+            <td><a href="{% url 'delete' i.id %}"><img src="{% static 'images/delete.png' %}" width="50px"></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}

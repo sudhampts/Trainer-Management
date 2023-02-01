@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static '/css/login.css' %}" rel="stylesheet">
+</head>
+<body>
+<form action="logread" method="post">
+    {% csrf_token %}
+    <div id="div1" align="center">
+        <h1>Login page</h1>
+        {% if data == False %}
+            <h3>Enter proper credentials</h3>
+        {% endif %}
+        <table width="100px">
+            <tr>
+                <td>UserName:</td>
+                <td><input type="text" name="txtUserName"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="txtPswd"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Login" name="btnSub">
+                </td>
+                <td>
+                    <a href="{% url 'reg' %}">Register</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+</body>
+</html>

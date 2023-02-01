@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="regdata">
+    {% csrf_token %}
+    <div id="div2" align="center">
+        <h2>User Registration</h2>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" name="txtName">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Age:
+                </td>
+                <td>
+                    <input type="number" name="txtAge">
+                </td>
+            </tr>
+            <tr>
+                <td>Phno:</td>
+                <td>
+                    <input type="number" name="txtPhno">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="password" name="txtPswd">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    City:
+                </td>
+                <td>
+                    <select name="ddlCity">
+                        <option>--select--</option>
+                        {% for i in City %}
+                            <option>{{i.city_name}}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="btnSub" value="Register">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</form>
+</body>
+</html>

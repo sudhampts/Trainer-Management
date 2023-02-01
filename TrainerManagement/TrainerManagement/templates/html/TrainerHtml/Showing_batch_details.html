@@ -1,0 +1,20 @@
+{% extends 'navbar\trainer_navbar.html' %}
+{% block content %}
+<div id="div1" align="center">
+    <h1> Batch Details</h1>
+    <table border="2" cellspacing="0">
+        <tr>
+            <td>Batch no</td>
+            <td>Course</td>
+            <td>Date</td>
+        </tr>
+        <tr>
+            {% for i in Assign %}
+                <td>{{i.batch_no}}</td>
+                <td>{{i.course}}</td>
+                <td>{{i.date}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+{% endblock %}

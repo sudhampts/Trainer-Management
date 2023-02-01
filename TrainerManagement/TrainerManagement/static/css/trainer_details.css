@@ -1,0 +1,21 @@
+#div1{
+    margin-top:100px;
+}
+
+
+table{
+    width:400px;
+    height:100px;
+    text-align:center;
+}
+th{
+    text-align:center;
+    color:Orange;
+    font-size:20px;
+    padding:20px;
+}
+td{
+    color:Green;
+    padding:20px;
+    font-size:20px;
+}
